@@ -153,6 +153,11 @@ You should observe:
 Approximate runtime in Colab (CPU): **3–6 minutes**, depending on video length.
 
 ---
+▶ Run in Google Colab
+
+You can run the full pipeline directly in Google Colab without any local setup:
+https://colab.research.google.com/drive/1BypqESSIfVb6NeC8mKhXingV9MGpKJ-c?usp=sharing
+
 
 ## **Use of AI Coding Tools**
 
