@@ -85,13 +85,13 @@ This confirms CLIP embeddings capture meaningful aesthetic structure and act as 
 
 This project is implemented as a **Google Colab notebook**, so no local setup is required.
 
-### **1️⃣ Open the Notebook**
+### **1️) Open the Notebook**
 
 * Open the notebook file from this repository in **Google Colab**
 
 
 
-### **2️⃣ Install Dependencies**
+### **2️) Install Dependencies**
 
 Run the setup cell:
 
@@ -101,7 +101,7 @@ Run the setup cell:
 
 
 
-### **3️⃣ Upload Videos**
+### **3️) Upload Videos**
 
 When prompted:
 
@@ -114,7 +114,7 @@ Upload **2–3 short royalty-free art or marketing-style videos**.
 
 
 
-### **4️⃣ Run Frame Extraction**
+### **4️) Run Frame Extraction**
 
 This step:
 
@@ -124,7 +124,7 @@ This step:
 
 
 
-### **5️⃣ Generate Embeddings**
+### **5️) Generate Embeddings**
 
 This stage:
 
@@ -133,7 +133,7 @@ This stage:
 * Runs verification checks
 
 
-### **6️⃣ Compute Similarity**
+### **6️) Compute Similarity**
 
 This section:
 
