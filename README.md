@@ -2,7 +2,7 @@
 
 **GenTA Competency Assessment – AI R&D Engineer**
 
-
+---
 
 ## **Overview**
 
@@ -10,39 +10,43 @@ This project implements a small end-to-end affective computing prototype inspire
 
 The objective is to demonstrate a **verification-first AI R&D workflow** for representing creative “vibe” in embedding space using modern pretrained multimodal models.
 
-
+---
 
 ## **Pipeline Summary**
 
 The notebook follows a structured pipeline:
 
-1. **Video Ingestion**
-   Short royalty-free art or marketing-style videos are treated as creative assets.
+### **1. Video Ingestion**
 
-2. **Frame Extraction**
-   Frames are sampled at fixed time intervals using OpenCV.
+Short royalty-free art or marketing-style videos are treated as creative assets.
 
-3. **Metadata Tracking**
-   A CSV file stores:
+### **2. Frame Extraction**
 
-   * `video_id`
-   * `frame_id`
-   * `file_path`
+Frames are sampled at fixed time intervals using OpenCV.
 
-   This ensures reproducibility across runs.
+### **3. Metadata Tracking**
 
-4. **Embedding Generation (CLIP)**
-   Frames are encoded using **CLIP (ViT-B/32)** to produce **512-dimensional embeddings** capturing aesthetic and stylistic features such as composition, color, and texture.
+A CSV file stores:
 
-5. **Similarity Analysis**
+* `video_id`
+* `frame_id`
+* `file_path`
 
-   * Pairwise cosine similarity matrix
-   * Similarity heatmap visualization
-   * Top-K nearest frame retrieval
+This ensures reproducibility across runs.
+
+### **4. Embedding Generation (CLIP)**
+
+Frames are encoded using **CLIP (ViT-B/32)** to produce **512-dimensional embeddings** capturing aesthetic and stylistic features such as composition, color, and texture.
+
+### **5. Similarity Analysis**
+
+* Pairwise cosine similarity matrix
+* Similarity heatmap visualization
+* Top-K nearest frame retrieval
 
 This pipeline transforms raw creative videos into **affective embeddings** that function as visual fingerprints.
 
-
+---
 
 ## **Verification-First Engineering**
 
@@ -55,7 +59,7 @@ The system includes lightweight checks to ensure correctness before interpretati
 
 These steps demonstrate a research-oriented mindset focused on pipeline reliability.
 
-
+---
 
 ## **Results**
 
@@ -67,7 +71,7 @@ Observed behavior from similarity analysis:
 
 This confirms CLIP embeddings capture meaningful aesthetic structure and act as **creative mood/style representations**.
 
-
+---
 
 ## **Tech Stack**
 
@@ -79,19 +83,17 @@ This confirms CLIP embeddings capture meaningful aesthetic structure and act as 
 * Matplotlib
 * Pandas
 
-
+---
 
 ## **How to Run This Project (Google Colab)**
 
 This project is implemented as a **Google Colab notebook**, so no local setup is required.
 
-### **1️) Open the Notebook**
+### **Step 1 — Open the Notebook**
 
-* Open the notebook file from this repository in **Google Colab**
+Open the notebook file from this repository in **Google Colab**.
 
-
-
-### **2️) Install Dependencies**
+### **Step 2 — Install Dependencies**
 
 Run the setup cell:
 
@@ -99,9 +101,7 @@ Run the setup cell:
 !pip install transformers torch torchvision opencv-python matplotlib pandas numpy
 ```
 
-
-
-### **3️) Upload Videos**
+### **Step 3 — Upload Videos**
 
 When prompted:
 
@@ -112,9 +112,7 @@ uploaded = files.upload()
 
 Upload **2–3 short royalty-free art or marketing-style videos**.
 
-
-
-### **4️) Run Frame Extraction**
+### **Step 4 — Run Frame Extraction**
 
 This step:
 
@@ -122,9 +120,7 @@ This step:
 * Saves them to a `frames/` directory
 * Generates a metadata CSV file
 
-
-
-### **5️) Generate Embeddings**
+### **Step 5 — Generate Embeddings**
 
 This stage:
 
@@ -132,8 +128,7 @@ This stage:
 * Encodes frames into 512-dim embeddings
 * Runs verification checks
 
-
-### **6️) Compute Similarity**
+### **Step 6 — Compute Similarity**
 
 This section:
 
@@ -141,9 +136,9 @@ This section:
 * Displays heatmap
 * Retrieves top-K similar frames
 
+---
 
-
-### **Expected Output**
+## **Expected Output**
 
 You should observe:
 
@@ -151,19 +146,19 @@ You should observe:
 * Lists of visually similar frames
 * Console logs confirming verification checks passed
 
+---
 
+## **Runtime**
 
-### **Runtime**
+Approximate runtime in Colab (CPU): **3–6 minutes**, depending on video length.
 
-Approximate runtime in Colab (CPU): **3–6 minutes** depending on video length.
-
-
+---
 
 ## **Use of AI Coding Tools**
 
 AI coding assistants (ChatGPT/Copilot) were used to accelerate development of boilerplate components such as model loading and preprocessing. All generated code was manually reviewed, adapted, and debugged. System design, verification logic, and interpretation were implemented with human oversight.
 
-
+---
 
 ## **Connection to GenTA Vision**
 
@@ -172,4 +167,3 @@ This prototype demonstrates foundational components of a GACS-style affective sy
 **Creative Frames → Embeddings → Similarity → Creative Understanding**
 
 In a production setting, creative embeddings could be linked to performance metrics (CTR, CVR, ROAS) to learn which visual “vibes” correlate with stronger outcomes.
-
